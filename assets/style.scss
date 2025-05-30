@@ -1,0 +1,440 @@
+// Stylage général
+
+$main-color: #230C33;
+$second-color: #CAA8F5;
+$third-color: #9A0965;
+
+@mixin second-font {
+	font-family: "Baumans", system-ui;
+	font-weight: 400;
+}
+
+@mixin third-font {
+	font-family: "Cinzel Decorative", serif;
+	font-weight: 700;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	font-family: "Poiret One", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: $second-color;
+	
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	h3 {
+		@include second-font;
+		padding: 10px;
+		text-align: center;
+	}
+
+	h4 {
+		font-weight: 400;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+// Stylage header, navbar et footer
+
+header {
+	background-color: $main-color;
+	border-bottom: $third-color 5px solid;
+	display: flex;
+	justify-content: center;
+	font-size: 16px;
+	position: fixed;
+	width: 100%;
+
+	.navbar {
+		width: 100%;
+		max-width: 1440px;
+		@include second-font;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 20px;
+
+		&__title {
+			font-size: 22px;
+			margin: 0;
+			font-weight: 400;
+		}
+
+		&__links {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+
+			&__menu {
+				display: flex;
+				gap: 20px;
+			}
+
+			&__media {
+				display: flex;
+				align-items: center;
+				gap: 5px;
+
+				img, button {
+					width: 25px;
+					height: 25px;
+					vertical-align: middle;
+				}
+
+				button {
+					background-color: $third-color;
+					color: white;
+					border-radius: 50%;
+					border: none;
+					text-align: start;
+					line-height: 25px;
+				}
+			}
+		}
+
+		
+	}
+}
+
+footer button {
+	width: 45px;
+	height: 45px;
+	border: none;
+	border-radius: 15px;
+	background-color: $third-color;
+	position: fixed;
+	right: 25px;
+	bottom: 25px;
+
+	img {
+		width: 25px;
+		height: auto;
+	}
+}
+
+
+// Stylage général sections
+
+.section {
+	margin: auto;
+	background-color: $main-color;
+
+	&.bg--light {
+		background-color: $second-color;
+		color: $main-color;
+	}
+
+	&__container {
+		max-width: 1440px;
+		margin: auto;
+		padding: 50px 0;
+	}
+
+	&__title {
+		@include third-font;
+		font-size: 20px;
+		padding-bottom: 20px;
+	}
+
+	&__intro {
+		text-align: center;
+		width: 265px;
+	}
+}
+
+// Stylage section home
+
+.home {
+	padding: 160px 0 100px 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 20px;
+
+	&__photo {
+		width: 250px;
+		height: auto;
+	}
+
+	&__buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+
+		.button {
+			width: 300px;
+			height: 60px;
+			border-radius: 20px;
+			background-color: $second-color;
+			border: $third-color dashed 3px;
+			@include third-font;
+			font-size: 20px;
+
+			&.full {
+				background-color: $third-color;
+				@include second-font;
+				color: white;
+				border: $main-color solid 3px;
+			}
+		}
+	}
+}
+
+// Stylage section compétences
+
+.skills {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__logo {
+		width: 80px;
+		height: auto;
+	}
+
+	&__article {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 50px;
+
+		&__title {
+			width: 50%;
+		}
+
+		&__content {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			gap: 10px;
+			row-gap: 20px;
+		}
+	}
+}
+
+// Stylage section portfolio
+
+.portfolio {
+	border-top: $second-color solid 2px;
+	border-left: $second-color solid 2px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	padding: 100px 50px;
+
+	&__projects {
+		width: 75%;
+		display: flex;
+		gap: 10px;
+		justify-content: space-between;
+
+		.project {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			align-items: center;
+			width: 33%;
+
+			&__image {
+				width: 220px;
+				height: auto;
+			}
+
+			&__buttons {
+				display: flex;
+				justify-content: space-evenly;
+				gap: 20px;
+
+				button {
+					width: 100px;
+					height: 40px;
+					background-color: $third-color;
+					border: none;
+					color: white;
+					@include second-font;
+					font-size: 18px;
+					border-top-left-radius: 25px;
+					border-bottom-right-radius: 25px;
+
+					&.btn--left {
+						border-bottom-left-radius: 25px;
+						border-bottom-right-radius: 40px;
+					}
+
+					&.btn--right {
+						border-top-right-radius: 25px;
+						border-top-left-radius: 40px;
+					}
+				}
+			}
+
+			&__content {
+				text-align: center;
+				font-size: 16px;
+				width: 70%;
+			}
+		}
+	}
+}
+
+// Stylage section à propos
+
+.about {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 50px;
+
+	.pro {
+		width: 40%;
+		order: -1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+		padding-left: 50px;
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+
+			article {
+				display: flex;
+				gap: 20px;
+				font-size: 16px;
+				align-items: center;
+			}
+		}
+
+		h4 {
+			background-color: $third-color;
+			color: white;
+			border-bottom-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 10px;
+			width: 60px;
+			height: 30px;
+			padding: 0;
+			@include second-font;
+			font-size: 16px;
+			align-content: center;
+			flex-shrink: 0;
+		}
+	}
+
+	.perso {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-right: 50px;
+
+		p {
+			font-size: 16px;
+			color: white;
+			border-top-left-radius: 20px;
+			border-bottom-left-radius: 20px;
+			padding: 5px;
+			text-align: right;
+		}
+
+		&--1 {
+			background-color: $main-color;
+		}
+
+		&--2 {
+			background: linear-gradient(90deg,$third-color 0%, $main-color 25%);
+		}
+
+		&--3 {
+			background: linear-gradient(90deg,$third-color 0%, $main-color 50%);
+		}
+
+		&--4 {
+			background: linear-gradient(90deg,$third-color 25%, $main-color 75%);
+		}
+
+		&--5 {
+			background: linear-gradient(90deg,$third-color 50%, $main-color 100%);
+		}
+
+		&--6 {
+			background-color: $third-color;
+		}
+	}
+}
+
+// Stylage section contact
+
+.contact {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 50px;
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		&__intro {
+			height: 70px;
+			color: white;
+			background: linear-gradient(0deg, $third-color 22%, $main-color 100%);
+			text-align: center;
+			align-content: center;
+			font-size: 20px;
+			border-bottom-left-radius: 75px;
+			border-bottom-right-radius: 75px;
+			padding: 0 100px;
+			margin-bottom: 30px;
+		}
+
+		&__input {
+			height: 50px;
+			margin-top: 5px;
+			margin-bottom: 30px;
+			box-sizing: border-box;
+			padding: 10px;
+			@include second-font;
+			font-size: 18px;
+
+			&.textarea {
+				height: 150px;
+				resize: none;
+			}
+		}
+
+		&__btn {
+			align-self: center;
+			width: 200px;
+			height: 50px;
+			border-radius: 20px;
+			background-color: $third-color;
+			@include second-font;
+			font-size: 20px;
+			color: white;
+			border: none;
+		}
+	}
+
+	.section__intro {
+		width: 20%;
+	}
+}

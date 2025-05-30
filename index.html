@@ -11,49 +11,222 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Cinzel+Decorative:wght@700&family=Poiret+One&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./assets/index.scss">
+		<link rel="stylesheet" href="./assets/style.css">
 		<script src="./assets/script.js" defer></script>
 	</head>
 
 	<body>
 		<header>
-			<h1>Flora Trecul - Dev web full-stack</h1>
-			<nav>
-				<ul>
-					<li><a href="#home">Accueil</a></li>
-					<li><a href="#skills">Compétences</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">À propos</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li>Media</li>
-				</ul>
+			<nav class="navbar">
+				<h1 class="navbar__title">Flora Trecul - Dev web full-stack</h1>
+				<div class="navbar__links">
+					<ul class="navbar__links__menu">
+						<li><a href="#home">Accueil</a></li>
+						<li><a href="#skills">Compétences</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#about">À propos</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+					<div class="navbar__links__media">
+						<button class="navbar__links__media__btn">CV</button>
+						<a target="_blank" href="https://linkedin.com/in/flora-trecul"><img class="navbar__links__media__img" src="./assets/images/logo-Linkedin.png" alt="Logo de LinkedIn"></a>
+						<a target="_blank" href="https://github.com/Flora-Trecul"><img class="navbar__links__media__img" src="./assets/images/logo-GitHub.png" alt="Logo de GitHub"></a>
+					</div>
+				</div>
 			</nav>
 		</header>
 		<main>
-			<section id="home">
-				<h2 class="section__title dark">Il était une fois...</h2>
-				<p class="section__desc dark">Une développeuse web full-stack à la recherche d’une alternance</p>
+			<section id="home" class="section bg--light">
+				<div class="section__container home">
+					<img class="home__photo" src="./assets/images/photo_flora-trecul_dev-web-full-stack.png" alt="Photo de Flora Trecul, dev web full-stack">
+					<div class="section__intro">
+						<h2 class="section__title">Il était une fois...</h2>
+						<p class="section__desc">Une développeuse web full-stack à la recherche d’une alternance</p>
+					</div>
+					<div class="home__buttons">
+						<button class="button full">Téléchargez mon CV</button>
+						<button class="button">Contactez-moi !</button>
+					</div>
+				</div>
 			</section>
 
-			<section id="skills">
-				<h2 class="section__title">Déterminée à développer ses compétences...</h2>
-				<p class="section__desc">Elle s’attela à acquérir les connaissances numériques nécessaires pour décrocher l’emploi de ses rêves.</p>
+			<section id="skills" class="section">
+				<div class="section__container skills">
+					<div class="section__intro">
+						<h2 class="section__title">Déterminée à développer ses compétences...</h2>
+						<p class="section__desc">Elle s’attela à acquérir les connaissances numériques nécessaires pour décrocher l’emploi de ses rêves.</p>
+					</div>
+					<article class="skills__article">
+						<h3 class="skills__article__title">Compétences front-end</h3>
+						<div class="skills__article__content">
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-HTML.png" alt="Logo de HTML">
+								<h4>HTML 5</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-CSS.png" alt="Logo de CSS">
+								<h4>CSS 3</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-React.png" alt="Logo de React">
+								<h4>React</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-Sass.png" alt="Logo de Sass">
+								<h4>Sass</h4>
+							</div>
+						</div>
+					</article>
+					<article class="skills__article">
+						<h3 class="skills__article__title">Compétences back-end</h3>
+						<div class="skills__article__content">
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-NodeJS.png" alt="Logo de NodeJS">
+								<h4>NodeJS</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-JavaScript.png" alt="Logo de JavaScript">
+								<h4>JavaScript</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-Express.png" alt="Logo d'Express">
+								<h4>Express</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-API-Rest.png" alt="Logo des API Rest">
+								<h4>API Rest</h4>
+							</div>
+						</div>
+					</article>
+					<article class="skills__article">
+						<h3 class="skills__article__title">Compétences développement</h3>
+						<div class="skills__article__content">
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-VSCode.png" alt="Logo de Visual Studio Code">
+								<h4>VS Code</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-GitHub.png" alt="Logo de GitHub">
+								<h4>GitHub</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-SEO.png" alt="Logo du SEO">
+								<h4>SEO</h4>
+							</div>
+							<div>
+								<img class="skills__logo" src="./assets/images/logo-accessibilite.png" alt="Logo de l'accessibilité web">
+								<h4>Accessibilité</h4>
+							</div>
+						</div>
+					</article>
+				</div>
 			</section>
 
-			<section id="portfolio">
-				<h2 class="section__title">Son portfolio commença à se remplir...</h2>
-				<p class="section__desc">Et elle partagea plusieurs projets témoignant de toute la passion et la rigueur qu’elle investissait dans son travail.</p>
+			<section id="portfolio" class="section">
+				<div class="section__container portfolio">
+					<div class="section__intro">
+						<h2 class="section__title">Son portfolio commença à se remplir...</h2>
+						<p class="section__desc">Et elle partagea plusieurs projets témoignant de toute la passion et la rigueur qu’elle investissait dans son travail.</p>
+					</div>
+					<div class="portfolio__projects">
+						<article class="project">
+							<h3>Portfolio d'architecte</h3>
+							<img class="project__image" src="./assets/images/portfolio-sophiebluel.png" alt="Photo du site Portfolio de l'architecte Sophie Bluel">
+							<div class="project__buttons">
+								<a target="_blank" href="https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul"></a><button class="btn--left">Code</button></a>
+								<button class="btn--right">Site</button>
+							</div>
+							<p class="project__content">Site web dynamique avec JavaScript : authentification, communication avec une API, gestion de formulaire et modale</p>
+						</article>
+						<article class="project">
+							<h3>Application immobilière</h3>
+							<img class="project__image" src="./assets/images/portfolio-kasa.png" alt="Photo du site de location immobilière Kasa">
+							<div class="project__buttons">
+								<button class="btn--left"><a href="https://github.com/Flora-Trecul/Kasa-React-Trecul" target="_blank">Code</a></button>
+								<button class="btn--right">Site</button>
+							</div>
+							<p class="project__content">Application React responsive avec Node.js et Vite, stylage en CSS avec Sass</p>
+						</article>
+						<article class="project">
+							<h3>Site de notation de livres</h3>
+							<img class="project__image" src="./assets/images/portfolio-grimoire.png" alt="Photo du site de notation de livres pour la librairie Mon Vieux Grimoire">
+							<div class="project__buttons">
+								<button class="btn--left"><a target="_blank" href="https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul">Code</a></button>
+								<button class="btn--right">Site</button>
+							</div>
+							<p class="project__content">Création d’une API Rest sécurisée avec serveur Express et base de données NoSQL (MongoDB), images respectant le Green Code</p>
+						</article>
+					</div>
+				</div>
 			</section>
 
-			<section id="about">
-				<h2 class="section__title dark">Elle était fière de sa reconversion...</h2>
-				<p class="section__desc dark">Car elle était malentendante et avait dû faire preuve d’une grande résilience pour (re)construire son projet professionnel.</p>
+			<section id="about" class="section bg--light">
+				<div class="section__container about">
+					<div class="section__intro">
+						<h2 class="section__title">Elle était fière de sa reconversion...</h2>
+						<p class="section__desc">Car elle était malentendante et avait dû faire preuve d’une grande résilience pour (re)construire son projet professionnel.</p>
+					</div>
+					<article class="home__article pro">
+						<h3>Parcours professionnel</h3>
+						<div class="pro__content">
+							<article>
+								<h4>2025</h4>
+								<p>RNCP Développeur informatique niveau 5 (Open Classrooms)</p>
+							</article>
+							<article>
+								<h4>2020</h4>
+								<p>Productrice et correctrice de contenus chez Ludogram (Tourcoing)</p>
+							</article>
+							<article>
+								<h4>2019</h4>
+								<p>Correctrice en freelance</p>
+							</article>
+							<article>
+								<h4>2018</h4>
+								<ul>
+									<li>Master en Éditions numériques et imprimées de textes littéraires (Lille)</li>
+									<li>Stage : assistante éditoriale chez Adrénalivre (Tourcoing)</li>
+								</ul>
+							</article>
+							<article>
+								<h4>2016</h4>
+								<p>Licence de Lettres Modernes (Toulouse)</p>
+							</article>
+						</div>
+					</article>
+					<article class="home__article perso">
+						<h3>Parcours personnel</h3>
+						<p class="perso--1">Organisée et autonome, j'aime appliquer mes capacités d'analyse et de logique à la résolution de problèmes</p>
+						<p class="perso--2">Je recherche la progression, le dépassement de soi et la persévérance, que j'applique dans ma pratique de l'escalade</p>
+						<p class="perso--3">Je m'intègre dans des communautés partageant mes valeurs : engagée pour la protection animale, je suis bénévole à la SPA</p>
+						<p class="perso--4">Je maîtrise l'anglais, que je pratique en regardant des séries ou en lisant des livres anglophones en V.O.</p>
+						<p class="perso--5">J'allie rigueur et précision à la créativité, notamment avec ma passion pour les activités manuelles comme le tricot</p>
+						<p class="perso--6">J'ai appris la gestion du stress et la réactivité via du contenu de haut niveau sur World of Warcraft</p>
+					</article>
+				</div>
 			</section>
 
-			<section id="contact">
-				<h2 class="section__title">Elle resta à l’écoute de toute opportunité professionnelle...</h2>
-				<p class="section__desc">Et continua à développer ses compétences via des projets personnels en attendant de trouver une alternance en développement web full-stack autour de Lille.</p>
+			<section id="contact" class="section">
+				<div class="section__container contact">
+					<div class="section__intro">
+						<h2 class="section__title">Elle resta à l’écoute de toute opportunité professionnelle...</h2>
+						<p class="section__desc">Et continua à développer ses compétences via des projets personnels en attendant de trouver une alternance en développement web full-stack autour de Lille.</p>
+					</div>
+					<form class="contact__form" action="#" method="post">
+						<p class="contact__form__intro">Contactez-moi sur LinkedIn, par mail (flora.trecul@gmail.com) ou via le formulaire ci-dessous !</p>
+						<label for="email">Votre email :</label>
+						<input class="contact__form__input" type="email" name="email" id="email">
+						<label for="message">Votre message :</label>
+						<textarea class="contact__form__input textarea" name="message" id="message"></textarea>
+						<input class="contact__form__btn" type="submit" value="ENVOYER">
+					</form>
+				</div>
 			</section>
 		</main>
 	</body>
+	<footer>
+		<button>
+			<img src="./assets/images/icone_arrow_up.png" alt="Icône flèche vers le haut">
+		</button>
+	</footer>
 </html>
