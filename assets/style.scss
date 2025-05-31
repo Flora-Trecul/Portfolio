@@ -3,6 +3,9 @@
 $main-color: #230C33;
 $second-color: #CAA8F5;
 $third-color: #9A0965;
+$bp-desktop: 1200px;
+$bp-tablet: 1024px;
+$bp-mobile: 768px;
 
 @mixin second-font {
 	font-family: "Baumans", system-ui;
@@ -56,6 +59,7 @@ header {
 	justify-content: center;
 	font-size: 16px;
 	position: fixed;
+	z-index: 2;
 	width: 100%;
 
 	.navbar {
@@ -71,41 +75,68 @@ header {
 			font-size: 22px;
 			margin: 0;
 			font-weight: 400;
+
+			@media (max-width: $bp-tablet) {
+				font-size: 18px;
+			}
 		}
 
-		&__links {
+		&__menu {
 			display: flex;
 			align-items: center;
 			gap: 20px;
+			margin-left: auto;
 
-			&__menu {
-				display: flex;
-				gap: 20px;
-			}
-
-			&__media {
-				display: flex;
-				align-items: center;
-				gap: 5px;
-
-				img, button {
-					width: 25px;
-					height: 25px;
-					vertical-align: middle;
-				}
-
-				button {
-					background-color: $third-color;
-					color: white;
-					border-radius: 50%;
-					border: none;
-					text-align: start;
-					line-height: 25px;
-				}
+			@media (max-width: $bp-tablet) {
+				font-size: 12px;
 			}
 		}
 
-		
+		&__media {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+
+			@media (min-width: $bp-mobile) {
+				margin-left: 20px;
+			}
+
+			img, button {
+				width: 25px;
+				height: 25px;
+				vertical-align: middle;
+			}
+
+			button {
+				background-color: $third-color;
+				color: white;
+				border-radius: 50%;
+				border: none;
+				text-align: start;
+				line-height: 25px;
+			}
+		}
+
+		@media (max-width: $bp-mobile) {
+			display: grid;
+			grid-template-columns: auto auto;
+			grid-template-rows: auto auto;
+			padding: 10px;
+			gap: 10px;
+
+			&__menu {
+				order: 2;
+				grid-column: 1 / 3;
+				justify-content: space-around;
+				margin-left: unset;
+				gap: 10px;
+			}
+
+			&__title {
+				font-size: 16px;
+				letter-spacing: -3%;
+			}
+		}
 	}
 }
 
@@ -122,6 +153,17 @@ footer button {
 	img {
 		width: 25px;
 		height: auto;
+	}
+
+	@media (max-width: $bp-desktop) {
+		width: 35px;
+		height: 35px;
+		right: 10px;
+		bottom: 10px;
+
+		img {
+			width: 15px;
+		}
 	}
 }
 
@@ -152,6 +194,10 @@ footer button {
 	&__intro {
 		text-align: center;
 		width: 265px;
+
+		@media (max-width: $bp-tablet) {
+			width: 80%;
+		}
 	}
 }
 
@@ -162,11 +208,43 @@ footer button {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	gap: 20px;
 
-	&__photo {
-		width: 250px;
-		height: auto;
+	&__photo.container {
+			position: relative;
+			width: 250px;
+			height: 250px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				background-color: $main-color;
+				width: 110%;
+				height: 110%;
+				border-radius: 50%;
+				top: -30px;
+				right: -30px;
+			}
+
+			.image {
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+				border: $second-color solid 5px;
+				box-sizing: border-box;
+				position: absolute;
+				z-index: 1;
+			}
+
+			&:after {
+				content: "";
+				position: absolute;
+				background-color: $third-color;
+				width: 100%;
+				height: 90%;
+				border-radius: 50%;
+				bottom: -30px;
+				left: -50px;
+			}
 	}
 
 	&__buttons {
@@ -188,6 +266,55 @@ footer button {
 				@include second-font;
 				color: white;
 				border: $main-color solid 3px;
+			}
+		}
+	}
+
+	@media (max-width: $bp-desktop) {
+		justify-content: center;
+		gap: 20px;
+
+		&__photo.container {
+			margin: 0 30px;
+		}
+	}
+
+	@media (max-width: $bp-tablet) {
+		flex-wrap: wrap;
+		padding: 110px 0 50px 0;
+
+		&__photo.container {
+			order: 1;
+			margin: 30px 20px 30px 80px;
+		}
+	}
+
+	@media (max-width: $bp-mobile) {
+		flex-direction: column;
+
+		&__buttons {
+			gap: 20px;
+
+			.button {
+				width: 200px;
+				height: 45px;
+				font-size: 16px;
+			}
+		}
+
+		&__photo.container {
+			width: 200px;
+			height: 200px;
+			margin: 30px 0 30px 15px;
+
+			&:before {
+				top: -20px;
+				right: -20px;
+			}
+
+			&:after {
+				bottom: -25px;
+				left: -35px;
 			}
 		}
 	}
@@ -219,8 +346,52 @@ footer button {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			grid-template-rows: auto;
+			text-align: center;
 			gap: 10px;
-			row-gap: 20px;
+		}
+	}
+
+	@media (max-width: $bp-tablet) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+
+		.section__intro {
+			grid-column: 1/4;
+			margin: auto;
+		}
+
+		&__article {
+			gap: 20px;
+			margin-top: 20px;
+		}
+	}
+
+	@media (max-width: $bp-mobile) {
+		display: flex;
+		flex-direction: column;
+
+		&__logo {
+			width: 50px;
+		}
+
+		&__article {
+			width: 80%;
+
+			&__title {
+				width: 100%;
+			}
+
+			&__content {
+				display: flex;
+				justify-content: space-evenly;
+				width: 100%;
+				flex-wrap: wrap;
+
+				h4 {
+					font-size: 16px;
+					width: 85px;
+				}
+			}
 		}
 	}
 }
@@ -231,27 +402,31 @@ footer button {
 	border-top: $second-color solid 2px;
 	border-left: $second-color solid 2px;
 	box-sizing: border-box;
+	padding: 50px;
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
+	flex-direction: column;
+	gap: 20px;
 	align-items: center;
-	padding: 100px 50px;
+
+	.section__intro {
+		width: 80%;
+	}
 
 	&__projects {
-		width: 75%;
 		display: flex;
+		flex-wrap: wrap;
 		gap: 10px;
-		justify-content: space-between;
+		justify-content: center;
 
 		.project {
 			display: flex;
 			flex-direction: column;
 			gap: 10px;
 			align-items: center;
-			width: 33%;
+			width: 300px;
 
 			&__image {
-				width: 220px;
+				width: 240px;
 				height: auto;
 			}
 
@@ -261,13 +436,13 @@ footer button {
 				gap: 20px;
 
 				button {
-					width: 100px;
-					height: 40px;
+					width: 90px;
+					height: 30px;
 					background-color: $third-color;
 					border: none;
 					color: white;
 					@include second-font;
-					font-size: 18px;
+					font-size: 16px;
 					border-top-left-radius: 25px;
 					border-bottom-right-radius: 25px;
 
@@ -285,9 +460,28 @@ footer button {
 
 			&__content {
 				text-align: center;
-				font-size: 16px;
-				width: 70%;
+				font-size: 14px;
+				padding: 10px;
+
+				h4 {
+					font-weight: 700;
+					padding-top: 10px;
+					@include second-font;
+				}
 			}
+		}
+
+		@media (max-width: $bp-desktop) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	@media (max-width: $bp-mobile) {
+		padding: 50px 0;
+
+		.project {
+			width: 80%;
 		}
 	}
 }
@@ -300,14 +494,25 @@ footer button {
 	align-items: center;
 	gap: 50px;
 
-	.pro {
+	&__article {
 		width: 40%;
-		order: -1;
+	}
+
+	.pro {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		gap: 20px;
-		padding-left: 50px;
+		padding-left: 20px;
+
+		@media (min-width: $bp-desktop) {
+			order: -1;
+
+			&__title.down {
+				order: 1;
+			}
+		}
 
 		&__content {
 			display: flex;
@@ -339,11 +544,10 @@ footer button {
 	}
 
 	.perso {
-		width: 40%;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		padding-right: 50px;
+		padding-right: 20px;
 
 		p {
 			font-size: 16px;
@@ -378,6 +582,37 @@ footer button {
 			background-color: $third-color;
 		}
 	}
+
+	@media (max-width: $bp-desktop) {
+		flex-direction: column;
+		gap: 30px;
+
+		.section__intro, &__article {
+			width: 80%;
+
+			&.pro {
+				padding-left: 0;
+			}
+
+			&.perso {
+				padding-right: 0;
+			}
+		}
+	}
+
+	@media (max-width: $bp-mobile) {
+		&__article {
+			width: 90%;
+
+			.pro__content article {
+				gap: 10px;
+			}
+
+			p, ul, &.perso p {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 // Stylage section contact
@@ -386,7 +621,6 @@ footer button {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	padding: 50px;
 
 	&__form {
 		display: flex;
@@ -394,7 +628,8 @@ footer button {
 		width: 50%;
 
 		&__intro {
-			height: 70px;
+			min-height: 70px;
+			height: fit-content;
 			color: white;
 			background: linear-gradient(0deg, $third-color 22%, $main-color 100%);
 			text-align: center;
@@ -404,6 +639,11 @@ footer button {
 			border-bottom-right-radius: 75px;
 			padding: 0 100px;
 			margin-bottom: 30px;
+
+			@media (max-width: $bp-mobile) {
+				padding: 0 20px;
+				font-size: 14px;
+			}
 		}
 
 		&__input {
@@ -434,7 +674,20 @@ footer button {
 		}
 	}
 
-	.section__intro {
-		width: 20%;
+	@media (min-width: $bp-desktop) {
+		padding: 50px;
+
+		.section__intro {
+			width: 20%;
+		}
+	}
+
+	@media (max-width: $bp-tablet) {
+		flex-direction: column;
+		gap: 30px;
+
+		&__form {
+			width: 80%;
+		}
 	}
 }

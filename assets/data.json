@@ -6,7 +6,7 @@
 		"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
 		"site": "URLsite"
 	},
-	"description": "Site web dynamique avec JavaScript : Site web dynamique avec JavaScript : authentification, communication avec une API, gestion de formulaire et modale",
+	"description": "Site web dynamique avec JavaScript : authentification, opérations CRUD, gestion de formulaire et modale",
 	"challenges": "Gestion d'une modale d'édition de galerie accessible uniquement pour un utilisateur authentifié. Ajout et suppression dynamiques d'une image simultanément dans la galerie et la modale."
 },
 {
@@ -28,6 +28,6 @@
 		"code": "https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul",
 		"site": "URLsite"
 	},
-	"description": "Création d’une API Rest sécurisée avec serveur Express et base de données NoSQL (MongoDB), images respectant le Green Code",
-	"challenges": "Traitement des images uploadées par les utilisateurs : vérification du format et optimisation selon les normes du Green Code. Mise en place de mesures de sécurité : secrets dans les variables d'environnement, schéma et encryptage des mots de passe, limitation du nombre de requêtes à l'API."
+	"description": "Création d’API Rest sécurisée avec serveur Express et database NoSQL (MongoDB), Green Code",
+	"challenges": "Vérification et optimisation des images uploadées selon le Green Code. Mise en place de mesures de sécurité : secrets dans les variables d'environnement, schéma et encryptage des mots de passe, limitation du nombre de requêtes à l'API."
 }]
