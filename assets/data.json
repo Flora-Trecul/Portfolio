@@ -1,10 +1,10 @@
 [{
 	"id": 1,
 	"title": "Portfolio d'architecte",
-	"image": "./assets/images/portfolio-sophiebluel.png",
+	"image": "./images/portfolio-sophiebluel.png",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
-		"site": "URLsite"
+		"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/"
 	},
 	"description": "Site web dynamique avec JavaScript : authentification, opérations CRUD, gestion de formulaire et modale",
 	"challenges": "Gestion d'une modale d'édition de galerie accessible uniquement pour un utilisateur authentifié. Ajout et suppression dynamiques d'une image simultanément dans la galerie et la modale."
@@ -12,10 +12,10 @@
 {
 	"id": 2,
 	"title": "Application immobilière",
-	"image": "./assets/images/portfolio-kasa.png",
+	"image": "./images/portfolio-kasa.png",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Kasa-React-Trecul",
-		"site": "URLsite"
+		"site": "https://flora-trecul.github.io/Kasa-React-Trecul/"
 	},
 	"description": "Application React responsive avec Node.js et Vite, stylage en CSS avec Sass",
 	"challenges": "Apprentissage du JSX et utilisation optimale des props pour transmettre des données entre composants. Utilisation de hooks, notamment pour la mise en place d'animations CSS."
@@ -23,7 +23,7 @@
 {
 	"id": 3,
 	"title": "Site de notation de livres",
-	"image": "./assets/images/portfolio-grimoire.png",
+	"image": "./images/portfolio-grimoire.png",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul",
 		"site": "URLsite"

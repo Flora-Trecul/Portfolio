@@ -27,7 +27,7 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<div class="navbar__media">
-					<button class="navbar__links__media__btn">CV</button>
+					<a href="./assets/CV_Trecul.pdf" target="_blank"><button>CV</button></a>
 					<a target="_blank" href="https://linkedin.com/in/flora-trecul"><img class="navbar__links__media__img" src="./assets/images/logo-Linkedin.png" alt="Logo de LinkedIn"></a>
 					<a target="_blank" href="https://github.com/Flora-Trecul"><img class="navbar__links__media__img" src="./assets/images/logo-GitHub.png" alt="Logo de GitHub"></a>
 				</div>
@@ -44,8 +44,8 @@
 						<p class="section__desc">Une développeuse web full-stack à la recherche d’une alternance</p>
 					</div>
 					<div class="home__buttons">
-						<button class="button full">Téléchargez mon CV</button>
-						<button class="button">Contactez-moi !</button>
+						<a href="./assets/CV_Trecul.pdf" download="CV_Flora-Trecul_dev-web-full-stack"><button class="button full">Téléchargez mon CV</button></a>
+						<a href="#contact"><button class="button">Contactez-moi !</button></a>
 					</div>
 				</div>
 			</section>
@@ -133,7 +133,7 @@
 							<h3>Portfolio d'architecte</h3>
 							<img class="project__image" src="./assets/images/portfolio-sophiebluel.png" alt="Photo du site Portfolio de l'architecte Sophie Bluel">
 							<div class="project__buttons">
-								<button class="btn--left">Code</button></a>
+								<button class="btn--left">Code</button>
 								<button class="btn--right">Site</button>
 							</div>
 							<div class="project__content">
@@ -233,15 +233,16 @@
 						<input class="contact__form__input" type="email" name="email" id="email">
 						<label for="message">Votre message :</label>
 						<textarea class="contact__form__input textarea" name="message" id="message"></textarea>
+						<p class="contact__form__error"></p>
 						<input class="contact__form__btn" type="submit" value="ENVOYER">
 					</form>
 				</div>
 			</section>
 		</main>
+		<footer>
+			<button class="btn--scroll" onclick="scrollToTop()">
+				<img src="./assets/images/icone_arrow_up.png" alt="Icône chevrons vers le haut">
+			</button>
+		</footer>
 	</body>
-	<footer>
-		<button>
-			<img src="./assets/images/icone_arrow_up.png" alt="Icône flèche vers le haut">
-		</button>
-	</footer>
 </html>
