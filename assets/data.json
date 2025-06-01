@@ -1,7 +1,8 @@
 [{
 	"id": 1,
 	"title": "Portfolio d'architecte",
-	"image": "./images/portfolio-sophiebluel.png",
+	"image": "assets/images/portfolio-sophiebluel.png",
+	"alt": "Photo du site Portfolio de l'architecte Sophie Bluel",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
 		"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/"
@@ -12,7 +13,8 @@
 {
 	"id": 2,
 	"title": "Application immobilière",
-	"image": "./images/portfolio-kasa.png",
+	"image": "assets/images/portfolio-kasa.png",
+	"alt": "Photo du site de location immobilière Kasa",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Kasa-React-Trecul",
 		"site": "https://flora-trecul.github.io/Kasa-React-Trecul/"
@@ -23,7 +25,8 @@
 {
 	"id": 3,
 	"title": "Site de notation de livres",
-	"image": "./images/portfolio-grimoire.png",
+	"image": "assets/images/portfolio-grimoire.png",
+	"alt": "Photo du site de notation de livres pour la librairie Mon Vieux Grimoire",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul",
 		"site": "URLsite"

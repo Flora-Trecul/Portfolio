@@ -67,7 +67,11 @@ header .navbar__menu {
   gap: 20px;
   margin-left: auto;
 }
-header .navbar__menu li:hover {
+header .navbar__menu a.active {
+  pointer-events: none;
+  text-decoration: overline underline;
+}
+header .navbar__menu a:hover {
   color: white;
 }
 @media (max-width: 1024px) {

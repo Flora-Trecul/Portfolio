@@ -20,7 +20,7 @@
 			<nav class="navbar">
 				<h1 class="navbar__title">Flora Trecul - Dev web full-stack</h1>
 				<ul class="navbar__menu">
-					<li><a href="#home">Accueil</a></li>
+					<li><a class="active" href="#home">Accueil</a></li>
 					<li><a href="#skills">Compétences</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
 					<li><a href="#about">À propos</a></li>
@@ -129,7 +129,7 @@
 						<p class="section__desc">Et elle partagea plusieurs projets témoignant de toute la passion et la rigueur qu’elle investissait dans son travail.</p>
 					</div>
 					<div class="portfolio__projects">
-						<article class="project">
+						<!-- <article class="project">
 							<h3>Portfolio d'architecte</h3>
 							<img class="project__image" src="./assets/images/portfolio-sophiebluel.png" alt="Photo du site Portfolio de l'architecte Sophie Bluel">
 							<div class="project__buttons">
@@ -170,7 +170,7 @@
 								<h4>Challenges</h4>
 								<p>Vérification et optimisation des images uploadées selon le Green Code. Mise en place de mesures de sécurité : secrets dans les variables d'environnement, schéma et encryptage des mots de passe, limitation du nombre de requêtes à l'API.</p>
 							</div>
-						</article>
+						</article> -->
 					</div>
 				</div>
 			</section>
@@ -230,9 +230,9 @@
 					<form class="contact__form" action="#" method="post">
 						<p class="contact__form__intro">Contactez-moi sur LinkedIn, par mail (flora.trecul@gmail.com) ou via le formulaire ci-dessous !</p>
 						<label for="email">Votre email :</label>
-						<input class="contact__form__input" type="email" name="email" id="email">
+						<input class="contact__form__input" type="email" name="email" id="email" placeholder="par.exemple@exemple.fr">
 						<label for="message">Votre message :</label>
-						<textarea class="contact__form__input textarea" name="message" id="message"></textarea>
+						<textarea class="contact__form__input textarea" name="message" id="message" placeholder="Bonjour, je vous contacte pour..."></textarea>
 						<p class="contact__form__error"></p>
 						<input class="contact__form__btn" type="submit" value="ENVOYER">
 					</form>
