@@ -9,19 +9,12 @@ function scrollFunction() {
 		btnScroll.style.display = "none";
 	}
 
-	// 0 home / 1 skills / 2 portfolio / 3 about / 4 contact
 	const navbarLinks = document.querySelectorAll(".navbar__menu a")
 	if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
 		navbarLinks[0].classList.remove("active")
 	} else {
 		navbarLinks[0].classList.add("active")
 	}
-
-	// if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-	// 	navbarLinks[1].classList.remove("active")
-	// } else {
-	// 	navbarLinks[1].classList.add("active")
-	// }
 }
 
 function scrollToTop() {
@@ -49,6 +42,7 @@ form.addEventListener("submit", function(e) {
 		msgError.innerText = "Veuillez renseigner une adresse mail valide"
 		msgError.style.visibility = "visible"
 	} else {
+		// Envoi de mail avec EmailJS
 		const templateParams = {
 			name: inputName,
 			message: inputMsg,
@@ -82,11 +76,9 @@ function displayProjects(projects) {
 		const h3 = document.createElement("h3")
 		h3.innerText = project.title
 		article.appendChild(h3)
-		const image = document.createElement("img")
-		image.classList.add("project__image")
-		image.alt = project.alt
-		image.src = project.image
-		article.appendChild(image)
+		const picture = document.createElement("picture")
+		picture.innerHTML = `<source srcset="${project.image}.webp" type="image/webp"><source srcset="${project.image}.jpg" type="image/jpeg"><img class="project__image" src="${project.image}.jpg" alt="${project.alt}">`
+		article.appendChild(picture)
 
 		const buttons = document.createElement("div")
 		buttons.classList.add("project__buttons")
@@ -100,13 +92,6 @@ function displayProjects(projects) {
 		site.target = "_blank"
 		site.innerHTML = "<button class=\"btn--right\">Site</button>"
 		buttons.appendChild(site)
-		if (project.URL.backend) {
-			const backend = document.createElement("a")
-			backend.href = project.URL.backend
-			backend.target = "_blank"
-			backend.innerHTML = "<button class=\"btn--bottom\">Cliquez ici pour activer l'API avant de visiter le site</button>"
-			buttons.appendChild(backend)
-		}
 		article.appendChild(buttons)
 
 		const content = document.createElement("div")
@@ -115,14 +100,31 @@ function displayProjects(projects) {
 		synopsisTitle.innerText = "Synopsis"
 		content.appendChild(synopsisTitle)
 		const synopsisText = document.createElement("p")
+		synopsisText.classList.add("project__content__synopsis")
 		synopsisText.innerText = project.description
 		content.appendChild(synopsisText)
 		const challengesTitle = document.createElement("h4")
 		challengesTitle.innerText = "Challenges"
 		content.appendChild(challengesTitle)
 		const challengesText = document.createElement("p")
+		challengesText.classList.add("project__content__challenges")
 		challengesText.innerText = project.challenges
 		content.appendChild(challengesText)
+		if (project.URL.backend) {
+			const backend = document.createElement("a")
+			backend.href = project.URL.backend
+			backend.target = "_blank"
+			backend.innerHTML = "<button class=\"button\">Activer l'API</button>"
+			content.appendChild(backend)
+		}
+		if (project.instructions) {
+			const instructionsTitle = document.createElement("h4")
+			instructionsTitle.innerText = "Instructions"
+			content.appendChild(instructionsTitle)
+			const instructionsText = document.createElement("p")
+			instructionsText.innerText = project.instructions
+			content.appendChild(instructionsText)
+		}
 
 		article.appendChild(content)
 		portfolio.appendChild(article)

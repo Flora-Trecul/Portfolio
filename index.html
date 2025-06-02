@@ -11,8 +11,8 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Baumans&family=Cinzel+Decorative:wght@700&family=Poiret+One&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./assets/style.css">
-		<script src="./assets/script.js" defer></script>
+		<link rel="stylesheet" href="./assets/style.min.css">
+		<script src="./assets/script.min.js" defer></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<script type="text/javascript">
 			(function() {
@@ -35,9 +35,9 @@
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<div class="navbar__media">
-					<a href="./assets/CV_Trecul.pdf" target="_blank"><button>CV</button></a>
-					<a target="_blank" href="https://linkedin.com/in/flora-trecul"><img class="navbar__links__media__img" src="./assets/images/logo-Linkedin.png" alt="Logo de LinkedIn"></a>
-					<a target="_blank" href="https://github.com/Flora-Trecul"><img class="navbar__links__media__img" src="./assets/images/logo-GitHub.png" alt="Logo de GitHub"></a>
+					<a class="button" href="./assets/CV_Trecul.pdf" target="_blank">CV</a>
+					<a target="_blank" href="https://linkedin.com/in/flora-trecul"><img class="navbar__links__media__img" src="./assets/images/logo-Linkedin.svg" alt="Logo de LinkedIn"></a>
+					<a target="_blank" href="https://github.com/Flora-Trecul"><img class="navbar__links__media__img" src="./assets/images/logo-GitHub.svg" alt="Logo de GitHub"></a>
 				</div>
 			</nav>
 		</header>
@@ -45,15 +45,21 @@
 			<section id="home" class="section bg--light">
 				<div class="section__container home">
 					<div class="home__photo container">
-						<img class="home__photo image" src="./assets/images/photo_flora-trecul_dev-web-full-stack.png" alt="Photo de Flora Trecul, dev web full-stack">
+						<picture>
+							<source srcset="./assets/images/photo_flora-trecul_dev-web-full-stack_250.webp 250w,
+							./assets/images/photo_flora-trecul_dev-web-full-stack_200.webp 200w" type="image/webp" sizes="(max-width: 768px) 200px, 250px">
+							<source srcset="./assets/images/photo_flora-trecul_dev-web-full-stack_250.jpg 250w,
+							./assets/images/photo_flora-trecul_dev-web-full-stack_200.jpg 200w" type="image/jpeg" sizes="(max-width: 768px) 200px, 250px">
+							<img class="home__photo image" src="./assets/images/photo_flora-trecul_dev-web-full-stack_250.jpg" alt="Photo de Flora Trecul, dev web full-stack">
+						</picture>
 					</div>
 					<div class="section__intro">
 						<h2 class="section__title">Il était une fois...</h2>
 						<p class="section__desc">Une développeuse web full-stack à la recherche d’une alternance</p>
 					</div>
 					<div class="home__buttons">
-						<a href="./assets/CV_Trecul.pdf" download="CV_Flora-Trecul_dev-web-full-stack"><button class="button full">Téléchargez mon CV</button></a>
-						<a href="#contact"><button class="button">Contactez-moi !</button></a>
+						<a class="button full" href="./assets/CV_Trecul.pdf" download="CV_Flora-Trecul_dev-web-full-stack">Téléchargez mon CV</a>
+						<a class="button" href="#contact">Contactez-moi !</a>
 					</div>
 				</div>
 			</section>
@@ -68,19 +74,19 @@
 						<h3 class="skills__article__title">Compétences front-end</h3>
 						<div class="skills__article__content">
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-HTML.png" alt="Logo de HTML">
+								<img class="skills__logo" src="./assets/images/logo-HTML.svg" alt="Logo de HTML">
 								<h4>HTML 5</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-CSS.png" alt="Logo de CSS">
+								<img class="skills__logo" src="./assets/images/logo-CSS.svg" alt="Logo de CSS">
 								<h4>CSS 3</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-React.png" alt="Logo de React">
+								<img class="skills__logo" src="./assets/images/logo-React.svg" alt="Logo de React">
 								<h4>React</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-Sass.png" alt="Logo de Sass">
+								<img class="skills__logo" src="./assets/images/logo-Sass.svg" alt="Logo de Sass">
 								<h4>Sass</h4>
 							</div>
 						</div>
@@ -89,19 +95,19 @@
 						<h3 class="skills__article__title">Compétences back-end</h3>
 						<div class="skills__article__content">
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-NodeJS.png" alt="Logo de NodeJS">
+								<img class="skills__logo" src="./assets/images/logo-NodeJS.svg" alt="Logo de NodeJS">
 								<h4>NodeJS</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-JavaScript.png" alt="Logo de JavaScript">
+								<img class="skills__logo" src="./assets/images/logo-JavaScript.svg" alt="Logo de JavaScript">
 								<h4>JavaScript</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-Express.png" alt="Logo d'Express">
+								<img class="skills__logo" src="./assets/images/logo-Express.svg" alt="Logo d'Express">
 								<h4>Express</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-API-Rest.png" alt="Logo des API Rest">
+								<img class="skills__logo" src="./assets/images/logo-API-Rest.svg" alt="Logo des API Rest">
 								<h4>API Rest</h4>
 							</div>
 						</div>
@@ -110,19 +116,19 @@
 						<h3 class="skills__article__title">Compétences développement</h3>
 						<div class="skills__article__content">
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-VSCode.png" alt="Logo de Visual Studio Code">
+								<img class="skills__logo" src="./assets/images/logo-VSCode.svg" alt="Logo de Visual Studio Code">
 								<h4>VS Code</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-GitHub.png" alt="Logo de GitHub">
+								<img class="skills__logo" src="./assets/images/logo-GitHub.svg" alt="Logo de GitHub">
 								<h4>GitHub</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-SEO.png" alt="Logo du SEO">
+								<img class="skills__logo" src="./assets/images/logo-SEO.svg" alt="Logo du SEO">
 								<h4>SEO</h4>
 							</div>
 							<div>
-								<img class="skills__logo" src="./assets/images/logo-accessibilite.png" alt="Logo de l'accessibilité web">
+								<img class="skills__logo" src="./assets/images/logo-accessibility.svg" alt="Logo de l'accessibilité web">
 								<h4>Accessibilité</h4>
 							</div>
 						</div>
@@ -136,8 +142,7 @@
 						<h2 class="section__title">Son portfolio commença à se remplir...</h2>
 						<p class="section__desc">Et elle partagea plusieurs projets témoignant de toute la passion et la rigueur qu’elle investissait dans son travail.</p>
 					</div>
-					<div class="portfolio__projects">
-					</div>
+					<div class="portfolio__projects"></div>
 				</div>
 			</section>
 
@@ -209,7 +214,7 @@
 		</main>
 		<footer>
 			<button class="btn--scroll" onclick="scrollToTop()">
-				<img src="./assets/images/icone_arrow_up.png" alt="Icône chevrons vers le haut">
+				<img src="./assets/images/icon-chevrons-up.svg" alt="Icône chevrons vers le haut">
 			</button>
 		</footer>
 	</body>

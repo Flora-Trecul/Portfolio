@@ -52,6 +52,19 @@ body {
 	button:hover, input[type=submit]:hover {
 		cursor: pointer;
 	}
+
+	.button {
+		width: 100%;
+		border-radius: 20px;
+		background-color: $main-color;
+		border: $second-color dotted 2px;
+		color: $second-color;
+		height: 30px;
+		margin-top: 10px;
+		box-sizing: border-box;
+		text-align: center;
+		align-content: center;
+	}
 }
 
 // Stylage header, navbar et footer
@@ -94,7 +107,6 @@ header {
 			a {
 				&.active {
 					pointer-events: none;
-					text-decoration: overline underline;
 				}
 
 				&:hover {
@@ -122,14 +134,17 @@ header {
 				vertical-align: middle;
 			}
 
-			button {
+			.button {
 				background-color: $third-color;
 				color: white;
 				border-radius: 50%;
 				border: none;
-				text-align: center;
 				line-height: 25px;
-				padding: 1px 0;
+				padding: 1px 1px 1px 0;
+				margin-top: 0;
+				height: 25px;
+				width: 25px;
+				font-size: 14px;
 			}
 		}
 
@@ -158,29 +173,32 @@ header {
 
 footer .btn--scroll {
 	display: none;
-	width: 45px;
-	height: 45px;
+	width: 40px;
+	height: 40px;
 	border: none;
 	border-radius: 15px;
 	background-color: $third-color;
 	position: fixed;
-	right: 25px;
-	bottom: 25px;
+	right: 15px;
+	bottom: 15px;
+	text-align: center;
 
 	img {
 		width: 25px;
 		height: 25px;
+		padding-top: 3px;
+		padding-right: 1px;
 	}
 
-	@media (max-width: $bp-desktop) {
-		width: 35px;
-		height: 35px;
+	@media (max-width: $bp-tablet) {
+		width: 30px;
+		height: 30px;
 		right: 10px;
 		bottom: 10px;
 
 		img {
-			width: 15px;
-			height: 15px;
+			width: 20px;
+			height: 20px;
 		}
 	}
 }
@@ -244,8 +262,8 @@ footer .btn--scroll {
 			}
 
 			.image {
-				width: 100%;
-				height: auto;
+				width: 250px;
+				height: 250px;
 				border-radius: 50%;
 				border: $second-color solid 5px;
 				background-color: $second-color;
@@ -274,11 +292,11 @@ footer .btn--scroll {
 		.button {
 			width: 300px;
 			height: 60px;
-			border-radius: 20px;
 			background-color: $second-color;
-			border: $third-color dashed 3px;
 			@include third-font;
+			border: $third-color dashed 3px;
 			font-size: 20px;
+			color: $main-color;
 
 			&.full {
 				background-color: $third-color;
@@ -324,16 +342,15 @@ footer .btn--scroll {
 		&__photo.container {
 			width: 200px;
 			height: 200px;
-			margin: 30px 0 30px 15px;
+			margin: 30px 0;
 
-			&:before {
-				top: -20px;
-				right: -20px;
+			.image {
+				width: 200px;
+				height: 200px;
 			}
 
-			&:after {
-				bottom: -25px;
-				left: -35px;
+			&:before, &:after {
+				content: none;
 			}
 		}
 	}
@@ -453,10 +470,8 @@ footer .btn--scroll {
 			&__buttons {
 				display: flex;
 				justify-content: space-evenly;
-				gap: 10px;
+				gap: 20px;
 				width: 240px;
-				height: 70px;
-				flex-wrap: wrap;
 
 				button {
 					width: 90px;
@@ -496,6 +511,16 @@ footer .btn--scroll {
 					font-weight: 700;
 					padding-top: 10px;
 					@include second-font;
+				}
+
+				&__synopsis {
+					height: 50px;
+				}
+
+				@media (min-width: $bp-mobile) {
+					&__challenges {
+						min-height: 100px;
+					}
 				}
 			}
 		}

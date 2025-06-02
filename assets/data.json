@@ -1,37 +1,28 @@
-[{
-	"id": 1,
-	"title": "Portfolio d'architecte",
-	"image": "assets/images/portfolio-sophiebluel.png",
-	"alt": "Photo du site Portfolio de l'architecte Sophie Bluel",
-	"URL": {
-		"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
-		"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/",
-		"backend": "https://portfolio-architecte-sophie-bluel-trecul.onrender.com/api/categories"
+[
+	{
+		"id": 1,
+		"title": "Portfolio d'architecte",
+		"image": "assets/images/portfolio-sophiebluel",
+		"alt": "Photo du site Portfolio de l'architecte Sophie Bluel",
+		"URL": {
+			"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
+			"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/",
+			"backend": "https://portfolio-architecte-sophie-bluel-trecul.onrender.com/api/categories"
+		},
+		"description": "Site web dynamique avec JavaScript : authentification, opérations CRUD, gestion de formulaire et modale",
+		"challenges": "Gestion d'une modale d'édition de galerie accessible uniquement pour un utilisateur authentifié. Ajout et suppression dynamiques d'une image simultanément dans la galerie et la modale.",
+		"instructions": "Activer l'API en cliquant sur le bouton ci-dessus avant d'accéder au site. Pour tester les fonctionnalités authentifiées, accéder au code et lire le fichier README du dossier backend."
 	},
-	"description": "Site web dynamique avec JavaScript : authentification, opérations CRUD, gestion de formulaire et modale",
-	"challenges": "Gestion d'une modale d'édition de galerie accessible uniquement pour un utilisateur authentifié. Ajout et suppression dynamiques d'une image simultanément dans la galerie et la modale."
-},
-{
-	"id": 2,
-	"title": "Application immobilière",
-	"image": "assets/images/portfolio-kasa.png",
-	"alt": "Photo du site de location immobilière Kasa",
-	"URL": {
-		"code": "https://github.com/Flora-Trecul/Kasa-React-Trecul",
-		"site": "https://flora-trecul.github.io/Kasa-React-Trecul/"
-	},
-	"description": "Application React responsive avec Node.js et Vite, stylage en CSS avec Sass",
-	"challenges": "Apprentissage du JSX et utilisation optimale des props pour transmettre des données entre composants. Utilisation de hooks, notamment pour la mise en place d'animations CSS."
-},
-{
-	"id": 3,
-	"title": "Site de notation de livres",
-	"image": "assets/images/portfolio-grimoire.png",
-	"alt": "Photo du site de notation de livres pour la librairie Mon Vieux Grimoire",
-	"URL": {
-		"code": "https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul",
-		"site": "URLsite"
-	},
-	"description": "Création d’API Rest sécurisée avec serveur Express et database NoSQL (MongoDB), Green Code",
-	"challenges": "Vérification et optimisation des images uploadées selon le Green Code. Mise en place de mesures de sécurité : secrets dans les variables d'environnement, schéma et encryptage des mots de passe, limitation du nombre de requêtes à l'API."
-}]
+	{
+		"id": 2,
+		"title": "Application immobilière",
+		"image": "assets/images/portfolio-kasa",
+		"alt": "Photo du site de location immobilière Kasa",
+		"URL": {
+			"code": "https://github.com/Flora-Trecul/Kasa-React-Trecul",
+			"site": "https://flora-trecul.github.io/Kasa-React-Trecul/"
+		},
+		"description": "Application React responsive avec Node.js et Vite, stylage en CSS avec Sass",
+		"challenges": "Apprentissage du JSX et utilisation optimale des props pour transmettre des données entre composants. Utilisation de hooks, notamment pour la mise en place d'animations CSS."
+	}
+]
