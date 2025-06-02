@@ -36,19 +36,34 @@ form.addEventListener("submit", function(e) {
 	e.preventDefault()
 
 	// On vérifie qu'il y a bien un mail valide + un message renseigné
-	const inputMail = document.getElementById("email").value
+	const inputName = document.getElementById("name").value
 	const inputMsg = document.getElementById("message").value
+	const inputMail = document.getElementById("email").value
 	const regex = new RegExp("^[a-zA-Z0-9]+[a-zA-Z0-9_\\-\\.?]+[a-zA-Z0-9]+@[a-zA-Z-]+\\.[a-zA-Z]{2,3}$");
 
 	const msgError = document.querySelector(".contact__form__error")
-	if (!inputMail || !inputMsg) {
+	if (!inputMail || !inputMsg || !inputName) {
 		msgError.innerText = "Tous les champs du formulaire doivent être remplis"
 		msgError.style.visibility = "visible"
 	} else if (!regex.test(inputMail)) {
 		msgError.innerText = "Veuillez renseigner une adresse mail valide"
 		msgError.style.visibility = "visible"
 	} else {
-		msgError.style.visibility = "hidden"
+		const templateParams = {
+			name: inputName,
+			message: inputMsg,
+			email: inputMail
+		}
+		emailjs
+			.send("service_u9wybr7", "template_cilzmkb", templateParams)
+			.then(() => {
+				msgError.innerText = "Votre message a bien été envoyé !"
+				msgError.style.visibility = "visible"
+			})
+			.catch(() => {
+				msgError.innerText = "Votre message n'a pas pu être envoyé, veuillez réessayer"
+				msgError.style.visibility = "visible"
+			})
 	}
 })
 
@@ -85,6 +100,13 @@ function displayProjects(projects) {
 		site.target = "_blank"
 		site.innerHTML = "<button class=\"btn--right\">Site</button>"
 		buttons.appendChild(site)
+		if (project.URL.backend) {
+			const backend = document.createElement("a")
+			backend.href = project.URL.backend
+			backend.target = "_blank"
+			backend.innerHTML = "<button class=\"btn--bottom\">Cliquez ici pour activer l'API avant de visiter le site</button>"
+			buttons.appendChild(backend)
+		}
 		article.appendChild(buttons)
 
 		const content = document.createElement("div")

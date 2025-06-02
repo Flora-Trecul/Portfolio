@@ -5,7 +5,8 @@
 	"alt": "Photo du site Portfolio de l'architecte Sophie Bluel",
 	"URL": {
 		"code": "https://github.com/Flora-Trecul/Portfolio-architecte-Sophie-Bluel_Trecul",
-		"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/"
+		"site": "https://portfolio-architecte-sophie-bluel-trecul-t9nr.onrender.com/",
+		"backend": "https://portfolio-architecte-sophie-bluel-trecul.onrender.com/api/categories"
 	},
 	"description": "Site web dynamique avec JavaScript : authentification, opérations CRUD, gestion de formulaire et modale",
 	"challenges": "Gestion d'une modale d'édition de galerie accessible uniquement pour un utilisateur authentifié. Ajout et suppression dynamiques d'une image simultanément dans la galerie et la modale."

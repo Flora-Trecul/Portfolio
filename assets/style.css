@@ -389,7 +389,10 @@ footer .btn--scroll img {
 .portfolio__projects .project__buttons {
   display: flex;
   justify-content: space-evenly;
-  gap: 20px;
+  gap: 10px;
+  width: 240px;
+  height: 70px;
+  flex-wrap: wrap;
 }
 .portfolio__projects .project__buttons button {
   width: 90px;
@@ -411,6 +414,11 @@ footer .btn--scroll img {
   border-top-right-radius: 25px;
   border-top-left-radius: 40px;
 }
+.portfolio__projects .project__buttons button.btn--bottom {
+  width: 100%;
+  font-size: 12px;
+  padding: 0 10px;
+}
 .portfolio__projects .project__content {
   text-align: center;
   font-size: 14px;
@@ -429,11 +437,19 @@ footer .btn--scroll img {
   }
 }
 @media (max-width: 768px) {
+  .portfolio__projects {
+    gap: 50px;
+  }
+}
+@media (max-width: 768px) {
   .portfolio {
     padding: 50px 0;
   }
   .portfolio .project {
     width: 80%;
+  }
+  .portfolio .project__buttons {
+    height: auto;
   }
 }
 

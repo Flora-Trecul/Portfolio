@@ -453,7 +453,10 @@ footer .btn--scroll {
 			&__buttons {
 				display: flex;
 				justify-content: space-evenly;
-				gap: 20px;
+				gap: 10px;
+				width: 240px;
+				height: 70px;
+				flex-wrap: wrap;
 
 				button {
 					width: 90px;
@@ -475,6 +478,12 @@ footer .btn--scroll {
 						border-top-right-radius: 25px;
 						border-top-left-radius: 40px;
 					}
+
+					&.btn--bottom {
+						width: 100%;
+						font-size: 12px;
+						padding: 0 10px;
+					}
 				}
 			}
 
@@ -495,6 +504,10 @@ footer .btn--scroll {
 			flex-wrap: wrap;
 			justify-content: center;
 		}
+
+		@media (max-width: $bp-mobile) {
+			gap: 50px;
+		}
 	}
 
 	@media (max-width: $bp-mobile) {
@@ -502,6 +515,10 @@ footer .btn--scroll {
 
 		.project {
 			width: 80%;
+
+			&__buttons {
+				height: auto;
+			}
 		}
 	}
 }
