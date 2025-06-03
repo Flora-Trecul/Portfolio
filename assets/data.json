@@ -24,5 +24,19 @@
 		},
 		"description": "Application React responsive avec Node.js et Vite, stylage en CSS avec Sass",
 		"challenges": "Apprentissage du JSX et utilisation optimale des props pour transmettre des données entre composants. Utilisation de hooks, notamment pour la mise en place d'animations CSS."
+	},
+	{
+		"id": 3,
+		"title": "Site de notation de livres",
+		"image": "assets/images/portfolio-grimoire",
+		"alt": "Photo du site de notation de livres pour la librairie Mon Vieux Grimoire",
+		"URL": {
+			"code": "https://github.com/Flora-Trecul/Mon-Vieux-Grimoire_Trecul",
+			"site": "https://flora-trecul.github.io/Mon-Vieux-Grimoire_Trecul/",
+			"backend": "https://mon-vieux-grimoire-trecul.onrender.com/api/books"
+		},
+		"description": "Création d’API Rest sécurisée avec serveur Express et database NoSQL (MongoDB), Green Code",
+		"challenges": "Vérification et optimisation des images uploadées selon le Green Code. Mise en place de mesures de sécurité : secrets dans les variables d'environnement, schéma et encryptage des mots de passe, limitation du nombre de requêtes à l'API.",
+		"instructions": "Activer l'API en cliquant sur le bouton ci-dessus avant d'accéder au site."
 	}
 ]
